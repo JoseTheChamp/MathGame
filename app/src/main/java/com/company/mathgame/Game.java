@@ -27,6 +27,7 @@ public class Game extends AppCompatActivity {
     Button buttonSubmit;
     Button buttonNextQuestion;
     EditText editTextAnswer;
+    TextView textViewHintDiv;
 
     CountDownTimer timer;
     //Boolean timerRunning;
@@ -53,6 +54,7 @@ public class Game extends AppCompatActivity {
         buttonNextQuestion = findViewById(R.id.buttonNextQuestion);
         buttonSubmit = findViewById(R.id.buttonSubmit);
         editTextAnswer = findViewById(R.id.editTextAnswer);
+        textViewHintDiv = findViewById(R.id.textViewHint);
 
         Intent intent = getIntent();
         operation =  intent.getCharExtra("operation", ' ');
@@ -69,6 +71,11 @@ public class Game extends AppCompatActivity {
             nextRound();
             }
         });
+
+        if (operation == '/'){
+            textViewHintDiv.setVisibility(View.VISIBLE);
+        }
+
         nextRound();
     }
 
@@ -198,12 +205,12 @@ public class Game extends AppCompatActivity {
                     resultCorrect = number1 * number2;
                     break;
                 case '/':
-                    number1 = random.nextInt(100);
-                    number2 = random.nextInt(100);
+                    number1 = random.nextInt(99)+1;
+                    number2 = random.nextInt(number1)+1;
                     resultCorrect = number1 / number2;
-                    if (number1%number2 != 0){
+                    /*if (number1%number2 != 0){
                         notNiceAnswer = true;
-                    }
+                    }*/
                     break;
                 default:
                     Log.e("What", "nextRound: not supported operation");

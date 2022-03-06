@@ -81,6 +81,15 @@
         android:hint="Enter your answer here."
         android:inputType="number" />
 
+    <TextView
+        android:id="@+id/textViewHint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:enabled="true"
+        android:gravity="center_horizontal"
+        android:text="Ignore reminder. {enter whole number.}"
+        android:visibility="invisible"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
