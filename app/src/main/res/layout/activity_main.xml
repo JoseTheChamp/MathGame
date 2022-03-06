@@ -17,10 +17,13 @@
         android:text="Addition" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textViewAdditionHigh"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:gravity="center_horizontal"
+        android:text="Highscore: 0"
+        android:textColor="#000000"
+        android:textSize="16sp" />
 
     <Button
         android:id="@+id/buttonSubtraction"
@@ -30,10 +33,13 @@
         android:text="subtraction" />
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/textViewSubtractionHigh"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:gravity="center_horizontal"
+        android:text="Highscore: 0"
+        android:textColor="#000000"
+        android:textSize="16sp" />
 
     <Button
         android:id="@+id/buttonMultiplication"
@@ -43,10 +49,13 @@
         android:text="Multiplication (Hard)" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/textViewMultiplicationHigh"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:gravity="center_horizontal"
+        android:text="Highscore: 0"
+        android:textColor="#000000"
+        android:textSize="16sp" />
 
     <Button
         android:id="@+id/buttonDivision"
@@ -56,8 +65,11 @@
         android:text="Division (hard)" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/textViewDivisionHigh"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:gravity="center_horizontal"
+        android:text="HighScore: 0"
+        android:textColor="#000000"
+        android:textSize="16sp" />
 </LinearLayout>

@@ -13,6 +13,7 @@ public class end_game extends AppCompatActivity {
     Button buttonExit;
     Button buttonAgain;
     TextView textViewScore;
+    TextView textViewOperation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,21 +23,22 @@ public class end_game extends AppCompatActivity {
         buttonAgain = findViewById(R.id.buttonPlayAgain);
         buttonExit = findViewById(R.id.buttonExit);
         textViewScore = findViewById(R.id.textViewScore);
+        textViewOperation = findViewById(R.id.textViewOperation);
 
-        textViewScore.setText("Score: " + getIntent().getIntExtra("Score",0)+"");
-        char operation = getIntent().getCharExtra("Operation",' ');
+        textViewScore.setText("Score: " + getIntent().getIntExtra("score",0)+"");
+        char operation = getIntent().getCharExtra("operation",' ');
         switch (operation){
             case '+':
-                textViewScore.setText("Addition");
+                textViewOperation.setText("Addition");
                 break;
             case '-':
-                textViewScore.setText("Subtraction");
+                textViewOperation.setText("Subtraction");
                 break;
             case '*':
-                textViewScore.setText("Multiplication");
+                textViewOperation.setText("Multiplication");
                 break;
             case '/':
-                textViewScore.setText("Division");
+                textViewOperation.setText("Division");
                 break;
         }
         buttonExit.setOnClickListener(new View.OnClickListener() {

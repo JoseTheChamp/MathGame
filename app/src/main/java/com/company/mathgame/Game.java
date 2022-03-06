@@ -3,6 +3,7 @@ package com.company.mathgame;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.sax.StartElementListener;
@@ -125,11 +126,49 @@ public class Game extends AppCompatActivity {
 
     private void endGame(){
         Log.d("Manual", "endGame: KonecKola");
+        manageHighScore();
+
         Intent intent = new Intent(Game.this,end_game.class);
-        intent.putExtra("Score",score);
-        intent.putExtra("Operation",operation);
+        intent.putExtra("score",score);
+        intent.putExtra("operation",operation);
         startActivity(intent);
         finish();
+    }
+
+    private void manageHighScore(){
+        SharedPreferences sp = getSharedPreferences("highScores",MODE_PRIVATE);
+        SharedPreferences.Editor editor = sp.edit();
+        int highScore;
+
+        switch (operation){
+            case '+':
+                Log.d("Manual", "manageHighScore: beforecommit  " + sp.getInt("highScoreAdd",0));
+                highScore = sp.getInt("highScoreAdd",0);
+                if (score>highScore){
+                    editor.putInt("highScoreAdd",score);
+                }
+                break;
+            case '-':
+                highScore = sp.getInt("highScoreSub",0);
+                if (score>highScore){
+                    editor.putInt("highScoreSub",score);
+                }
+                break;
+            case '*':
+                highScore = sp.getInt("highScoreMul",0);
+                if (score>highScore){
+                    editor.putInt("highScoreMul",score);
+                }
+                break;
+            case '/':
+                highScore = sp.getInt("highScoreDiv",0);
+                if (score>highScore){
+                    editor.putInt("highScoreDiv",score);
+                }
+                break;
+        }
+        editor.commit();
+        Log.d("Manual", "manageHighScore: after commit   " + sp.getInt("highScoreAdd",0));
     }
 
     private void nextRound(){
