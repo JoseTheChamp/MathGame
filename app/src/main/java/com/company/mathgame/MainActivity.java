@@ -28,7 +28,36 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this,Game.class);
+                intent.putExtra("operation",'+');
                 startActivity(intent);
+                finish();
+            }
+        });
+        subtraction.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,Game.class);
+                intent.putExtra("operation",'-');
+                startActivity(intent);
+                finish();
+            }
+        });
+        multi.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,Game.class);
+                intent.putExtra("operation",'*');
+                startActivity(intent);
+                finish();
+            }
+        });
+        division.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,Game.class);
+                intent.putExtra("operation",'/');
+                startActivity(intent);
+                finish();
             }
         });
 

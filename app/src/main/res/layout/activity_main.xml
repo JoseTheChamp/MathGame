@@ -16,6 +16,12 @@
         android:layout_marginTop="60dp"
         android:text="Addition" />
 
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
     <Button
         android:id="@+id/buttonSubtraction"
         android:layout_width="200dp"
@@ -23,12 +29,24 @@
         android:layout_marginTop="20dp"
         android:text="subtraction" />
 
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
     <Button
         android:id="@+id/buttonMultiplication"
         android:layout_width="200dp"
         android:layout_height="75dp"
         android:layout_marginTop="20dp"
-        android:text="Multiplication" />
+        android:text="Multiplication (Hard)" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
 
     <Button
         android:id="@+id/buttonDivision"
@@ -36,4 +54,10 @@
         android:layout_height="75dp"
         android:layout_marginTop="20dp"
         android:text="Division (hard)" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
 </LinearLayout>
