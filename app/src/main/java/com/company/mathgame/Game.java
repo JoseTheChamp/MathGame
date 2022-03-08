@@ -112,6 +112,7 @@ public class Game extends AppCompatActivity {
 
     private void endRound(){
         buttonNextQuestion.setClickable(true);
+        buttonSubmit.setClickable(false);
         pauseTimer();
         if (TextUtils.isEmpty(editTextAnswer.getText().toString())){
             editTextAnswer.setText(0+"");
@@ -120,11 +121,11 @@ public class Game extends AppCompatActivity {
         if (resultCorrect == resultAnswer){
             score++;
             textViewScore.setText(score +"");
-            textViewQuestion.setText("Correct: " + number1 + " " + operation + " " + number2 + " = " + resultCorrect);
+            textViewQuestion.setText(getResources().getString(R.string.correct) + " " + number1 + " " + operation + " " + number2 + " = " + resultCorrect);
         }else{
             lives--;
             textViewLives.setText(lives +"");
-            textViewQuestion.setText("Wrong: " + number1 + " " + operation + " " + number2 + " = " + resultCorrect);
+            textViewQuestion.setText(getResources().getString(R.string.wrong) + " "+ number1 + " " + operation + " " + number2 + " = " + resultCorrect);
             if (lives == 0){
                 endGame();
             }
@@ -180,6 +181,7 @@ public class Game extends AppCompatActivity {
 
     private void nextRound(){
         buttonNextQuestion.setClickable(false);
+        buttonSubmit.setClickable(true);
         editTextAnswer.setText("");
         editTextAnswer.requestFocus();
         boolean notNiceAnswer = false;

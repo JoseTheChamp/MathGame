@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:gravity="center_horizontal"
-        android:text="Congratulations"
+        android:text="@string/congratulations"
         android:textSize="26sp" />
 
     <TextView
@@ -30,7 +30,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:text="Score:"
+        android:text="@string/score"
         android:textSize="18sp" />
 
     <LinearLayout
@@ -48,7 +48,7 @@
             android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
-            android:text="Play again" />
+            android:text="@string/play_again" />
 
         <Button
             android:id="@+id/buttonExit"
@@ -59,6 +59,6 @@
             android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
-            android:text="exit" />
+            android:text="@string/exit" />
     </LinearLayout>
 </LinearLayout>

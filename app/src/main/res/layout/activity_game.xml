@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Score:"
+            android:text="@string/score"
             android:textSize="18sp" />
 
         <TextView
@@ -34,7 +34,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Lives:"
+            android:text="@string/lives"
             android:textSize="18sp" />
 
         <TextView
@@ -50,7 +50,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Time:"
+            android:text="@string/time"
             android:textSize="18sp" />
 
         <TextView
@@ -78,7 +78,7 @@
         android:layout_height="60dp"
         android:layout_marginTop="40dp"
         android:ems="10"
-        android:hint="Enter your answer here."
+        android:hint="@string/prompt"
         android:inputType="number" />
 
     <TextView
@@ -87,7 +87,7 @@
         android:layout_height="wrap_content"
         android:enabled="true"
         android:gravity="center_horizontal"
-        android:text="Ignore reminder. {enter whole number.}"
+        android:text="@string/hint"
         android:visibility="invisible"/>
 
     <LinearLayout
@@ -97,7 +97,7 @@
 
         <Button
             android:id="@+id/buttonSubmit"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="60dp"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
@@ -105,11 +105,11 @@
             android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
-            android:text="OK" />
+            android:text="@string/ok" />
 
         <Button
             android:id="@+id/buttonNextQuestion"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="60dp"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
@@ -117,7 +117,7 @@
             android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
-            android:text="next question" />
+            android:text="@string/next_button" />
     </LinearLayout>
 
 </LinearLayout>

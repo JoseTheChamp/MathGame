@@ -79,9 +79,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void loadHighScores(){
         SharedPreferences sp = getSharedPreferences("highScores",MODE_PRIVATE);
-        textViewAdd.setText("Highscore: " + sp.getInt("highScoreAdd",0));
-        textViewSub.setText("Highscore: " + sp.getInt("highScoreSub",0));
-        textViewMul.setText("Highscore: " + sp.getInt("highScoreMul",0));
-        textViewDiv.setText("Highscore: " + sp.getInt("highScoreDiv",0));
+        String prompt = getResources().getString(R.string.ma_highscore);
+        textViewAdd.setText(prompt + " " + sp.getInt("highScoreAdd",0));
+        textViewSub.setText(prompt + " " + sp.getInt("highScoreSub",0));
+        textViewMul.setText(prompt + " " + sp.getInt("highScoreMul",0));
+        textViewDiv.setText(prompt + " " + sp.getInt("highScoreDiv",0));
     }
 }

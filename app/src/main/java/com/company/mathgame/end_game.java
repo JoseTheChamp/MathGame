@@ -29,16 +29,16 @@ public class end_game extends AppCompatActivity {
         char operation = getIntent().getCharExtra("operation",' ');
         switch (operation){
             case '+':
-                textViewOperation.setText("Addition");
+                textViewOperation.setText(getResources().getString(R.string.op_addition));
                 break;
             case '-':
-                textViewOperation.setText("Subtraction");
+                textViewOperation.setText(getResources().getString(R.string.op_Subtraction));
                 break;
             case '*':
-                textViewOperation.setText("Multiplication");
+                textViewOperation.setText(getResources().getString(R.string.op_Multiplication));
                 break;
             case '/':
-                textViewOperation.setText("Division");
+                textViewOperation.setText(getResources().getString(R.string.op_division));
                 break;
         }
         buttonExit.setOnClickListener(new View.OnClickListener() {

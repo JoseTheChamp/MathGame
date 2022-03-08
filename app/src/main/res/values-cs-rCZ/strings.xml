@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Hra matematiky</string>
+    <string name="op_addition">Sčítání</string>
+    <string name="op_Subtraction">Odčítání</string>
+    <string name="op_Multiplication">Násobení (těžké)</string>
+    <string name="op_division">Dělení (těžké)</string>
+    <string name="ma_highscore">Nejvyšší skóre:</string>
+    <string name="score">Skóre:</string>
+    <string name="lives">Životy:</string>
+    <string name="time">Čas:</string>
+    <string name="ok">OK</string>
+    <string name="prompt">Zadej tvoji odpověď sem:</string>
+    <string name="next_button">Další otázka</string>
+    <string name="congratulations">Kongratulace!!</string>
+    <string name="exit">Opustit hru</string>
+    <string name="play_again">Hrát znova</string>
+    <string name="wrong">Špatně</string>
+    <string name="correct">Správně</string>
+    <string name="hint">Ignoruj zbytek (Napiš celé číslo)</string>
+</resources>
